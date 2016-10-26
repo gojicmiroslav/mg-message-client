@@ -8,10 +8,14 @@
  * Controller of the mgMessageClientApp
  */
 angular.module('mgMessageClientApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  	.controller('MainCtrl', ['$http', function ($http) {
+    
+  		this.postMessage = function(){
+  			console.log('Post');
+  		};
+
+  		this.getMessages = function(){
+  			
+    	};
+
+  	}]);
