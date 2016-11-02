@@ -11,9 +11,8 @@ angular.module('mgMessageClientApp')
   	.controller('MainCtrl', ['$http', function ($http) {
 
   		this.postMessage = function(){
-  			//$http.post('http://localhost:5000/api/message', { msg: this.message });
-        $http.post('https://mgmessage-server.herokuapp.com/api/message', { msg: this.message });
-    		//this.getMessages();
+  			$http.post('http://localhost:5000/api/message', { msg: this.message });
+        //$http.post('https://mgmessage-server.herokuapp.com/api/message', { msg: this.message });
   		};
 
   		this.getMessages = function(){
@@ -23,5 +22,7 @@ angular.module('mgMessageClientApp')
     			vm.messages = result.data;
     		});
     	};
+
+      this.getMessages();
 
   	}]);
